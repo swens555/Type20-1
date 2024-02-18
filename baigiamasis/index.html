@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="navigation">
+		-- <a href="?page=catalog">Catalog</a> -- <a href="?page=product">New product</a> --
+	</section>
+
+	<section id="sectionCatalog" class="section">
+		<h3 class="section_title">Catalog</h3>
+		<div class="catalog" id="catalog">
+			Loading products...
+		</div>
+
+	</section>
+
+	<section id="sectionProduct" class="section">
+		<h3 class="section_title">Product</h3>
+		<div class="product-item" id="productItem">
+			<img class="product-item_image" />
+			<div class="product-item_meta">
+				<div class="product-item_title"></div>
+				<div class="product-item_place"></div>
+				<div class="product-item_price"></div>
+				<div class="product-item_description"></div>
+				<div class="product-item_actions">
+					<a href="#remove" class="product-item_action">Delete product</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="sectionForm" class="section">
+		<h3 class="section_title">New product</h3>
+		<form class="product-form" id="productForm">
+			<div>
+				<div class="product-form_field">
+					<label>Product title:</label>
+					<input type="text" required name="name" />
+				</div>
+				<div class="product-form_field">
+					<label>Product image url:</label>
+					<input type="text" required name="imageUrl" />
+				</div>
+				<div class="product-form_field">
+					<label>Product place:</label>
+					<input type="text" required name="place" />
+				</div>
+				<div class="product-form_field">
+					<label>Product price:</label>
+					<input type="number" required name="price" min="0" />
+				</div>
+				<div class="product-form_actions">
+					<a href="#add" class="product-form_action">Save</a>
+				</div>
+			</div>
+			<div>
+				<div class="product-form_field">
+					<label>Product description:</label>
+					<textarea required name="description"></textarea>
+				</div>
+			</div>
+
+		</form>
+	</section>
+
+	<section id="errors">
+
+	</section>
+
+<template id="catalogItem">
+	<a class="catalog-item">
+		<div class="catalog-item_inner">
+			<img class="catalog-item_image" />
+			<div class="catalog-item_meta">
+				<div class="catalog-item_title"></div>
+				<div class="catalog-item_price"></div>
+			</div>
+		</div>
+	</a>
+</template>
+
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", event => {
+		navigate();
+	});
+</script>
+</body>
+</html>

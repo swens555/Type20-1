@@ -1,0 +1,179 @@
+/* SECTIONS */
+
+.section {
+	display: none;
+}
+.section.section__active {
+	display: block;
+}
+
+.section_title {
+	font-size: 28px;
+	font-weight: 700;
+	padding-bottom: 10px;
+	margin: 20px 0;
+	border-bottom: 1px solid black;
+}
+
+section{
+  padding: 0 15px;
+}
+
+@media (min-width: 575.98px){
+  section {
+    padding: 0 calc(50% - 270px);
+  }
+}
+
+@media (min-width: 767.98px){
+  section {
+    padding: 0 calc(50% - 360px);
+  }
+}
+
+@media (min-width: 991.98px) {
+  section {
+    padding: 0 calc(50% - 480px);
+  }
+}
+
+@media (min-width: 1199.98px){
+  section {
+    padding: 0 calc(50% - 590px);
+  }
+}
+
+.navigation {
+	text-align: center;
+}
+
+/* CATALOG */
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.catalog-item {
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.catalog-item_inner {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	justify-content: center;
+}
+.catalog-item_image {
+	width: 100%;
+	object-fit: contain;
+}
+
+.catalog-item_meta {
+	font-size: 24px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.catalog-item_title {
+	text-align: left;
+}
+
+.catalog-item_price {
+	text-align: right;
+}
+
+/* PRODUCT */
+
+.product-item {
+	display: none;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.product-item.product-item__active {
+	display: grid;
+}
+.product-item_image {
+	width: 100%;
+	object-fit: contain;
+}
+
+.product-item_meta {
+	display: flex;
+	flex-flow: column;
+}
+
+.product-item_title {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.product-item_price {
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.product-item_description {
+	margin-bottom: 20px;
+
+}
+.product-item_place {
+	font-size: 80%;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+.product-item_actions {
+
+}
+
+.product-item_action {
+
+}
+
+
+/* FORM */
+
+.product-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.product-form_field {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 10px;
+	align-content: stretch;
+	margin-bottom: 20px;
+}
+
+.product-form_field TEXTAREA {
+	min-height: 250px;
+}
+
+@media (max-width: 767px) {
+	.catalog {
+	    grid-template-columns: repeat(2, 1fr);
+	}
+	.product-item {
+	    grid-template-columns: 1fr;
+	}
+	.product-form {
+	    grid-template-columns: 1fr;
+	}
+
+}
+
+@media (max-width: 499px) {
+	.catalog {
+	    grid-template-columns: 1fr;
+	}
+}
